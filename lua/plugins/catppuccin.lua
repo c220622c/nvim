@@ -5,6 +5,7 @@ return{
         lazy=false,
         config = function()
             require("catppuccin").setup({
+    auto_integrations = true,
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
