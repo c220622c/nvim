@@ -1,6 +1,6 @@
 return {
 	"mason-org/mason.nvim",
-	event = { "BufRead", "BufNewFile" },
+	event = { "BufEnter" },
 	cmd = "Mason",
 	opts = {
 		ui = {

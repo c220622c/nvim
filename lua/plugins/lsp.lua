@@ -1,6 +1,6 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
-	event = { "BufRead", "BufNewFile" },
+	event = { "BufEnter" },
 	opts = {
 		vim.lsp.enable("lua_ls"),
 	},
