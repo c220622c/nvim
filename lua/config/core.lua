@@ -24,3 +24,4 @@ vim.o.smartindent = false -- indentation is aware of newline insert
 
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.o.clipboard = "unnamedplus"
