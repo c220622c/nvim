@@ -6,12 +6,70 @@ return {
 	opts = {
 		image = { enabled = true },
 		dashboard = {},
+		bigfile = {},
 		notifier = {
 			enabled = true,
 			timeout = 3000,
 		},
+		explorer = {
+			-- your explorer configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+		picker = {
+			sources = {
+				explorer = {
+					-- your explorer picker configuration comes here
+					-- or leave it empty to use the default settings
+				},
+			},
+		},
+		indent = {},
 	},
-	keys = {},
+	keys = {
+		{
+			"<leader><space>",
+			function()
+				Snacks.picker.smart()
+			end,
+			desc = "Smart Find Files",
+		},
+		{
+			"<leader>,",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "Buffers",
+		},
+		{
+			"<leader>/",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>:",
+			function()
+				Snacks.picker.command_history()
+			end,
+			desc = "Command History",
+		},
+		{
+			"<leader>n",
+			function()
+				Snacks.picker.notifications()
+			end,
+			desc = "Notification History",
+		},
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
+	},
 	init = function()
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "VeryLazy",
