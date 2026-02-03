@@ -67,40 +67,62 @@ return {
 	keys = {
 		-- Sth like telescope
 		{
-			"<leader>ps",
+			"<leader>ss",
 			function()
 				Snacks.picker.smart()
 			end,
 			desc = "Smart Find Files",
 		},
 		{
-			"<leader>pb",
+			"<leader>sb",
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
 		},
 		{
-			"<leader>pg",
+			"<leader>sg",
 			function()
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
 		},
 		{
-			"<leader>pc",
+			"<leader>sc",
 			function()
 				Snacks.picker.command_history()
 			end,
 			desc = "Command History",
 		},
 		{
-			"<leader>pn",
+			"<leader>sn",
 			function()
 				Snacks.picker.notifications()
 			end,
 			desc = "Notification History",
 		},
+		{
+			"<leader>sr",
+			function()
+				Snacks.picker.registers()
+			end,
+			desc = "Registers",
+		},
+		{
+			"<leader>si",
+			function()
+				Snacks.picker.icons()
+			end,
+			desc = "Icons",
+		},
+		{
+			"<leader>sm",
+			function()
+				Snacks.picker.man()
+			end,
+			desc = "Man Pages",
+		},
+		--file explorer
 		{
 			"<leader>n",
 			function()

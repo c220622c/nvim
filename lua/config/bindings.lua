@@ -35,6 +35,9 @@ wk.add({
 	{ "<leader>lm", "<cmd>Mason<cr>", desc = "Open Mason UI", mode = "n" },
 	{ "<leader>ls", "<cmd>LspStart<cr>", desc = "Start Lsp", mode = "n" },
 	{ "<leader>ll", "<cmd>LspLog<cr>", desc = "Show Lsp Log in new buffer", mode = "n" },
+	--snacks.picker
+	--TODO: add snack bindings
+
 	--NvimTree
 	--	{ "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree", mode = "n" },
 	--trouble
