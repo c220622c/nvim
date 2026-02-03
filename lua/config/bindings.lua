@@ -25,18 +25,18 @@ keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 local wk = require("which-key")
 wk.add({
 	--Telescopes
-	{ "<leader>t", desc = "Telescope" },
-	{ "<leader>tf", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
-	{ "<leader>tc", "<cmd>Telescope commands<cr>", desc = "Find commands", mode = "n" },
-	{ "<leader>tb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Find pattern in buffer", mode = "n" },
-	{ "<leader>tp", "<cmd>Telescope live_grep<cr>", desc = "Find pattern in pwd", mode = "n" },
+	--	{ "<leader>t", desc = "Telescope" },
+	--	{ "<leader>tf", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
+	--	{ "<leader>tc", "<cmd>Telescope commands<cr>", desc = "Find commands", mode = "n" },
+	--	{ "<leader>tb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Find pattern in buffer", mode = "n" },
+	--	{ "<leader>tp", "<cmd>Telescope live_grep<cr>", desc = "Find pattern in pwd", mode = "n" },
 	-- Lsps
 	{ "<leader>l", icon = "󰇻", desc = "Lsps" },
 	{ "<leader>lm", "<cmd>Mason<cr>", desc = "Open Mason UI", mode = "n" },
 	{ "<leader>ls", "<cmd>LspStart<cr>", desc = "Start Lsp", mode = "n" },
 	{ "<leader>ll", "<cmd>LspLog<cr>", desc = "Show Lsp Log in new buffer", mode = "n" },
 	--NvimTree
-	{ "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree", mode = "n" },
+	--	{ "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree", mode = "n" },
 	--trouble
 	{ "<leader>x", desc = "Trouble", icon = "", mode = "n" },
 	{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)", mode = "n" },
