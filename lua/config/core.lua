@@ -3,7 +3,8 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.o.ignorecase = true -- searching case insensitive
 vim.o.smartcase = true -- except patterns contain uppercase
-
+vim.o.encoding = "utf-8"
+vim.o.fileencoding = "utf-8"
 -- visual
 vim.o.number = true
 vim.o.relativenumber = true
