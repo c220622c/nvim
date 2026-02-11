@@ -9,10 +9,6 @@ keymap("i", "jk", "<ESC>", default_opts)
 keymap("v", "K", "<gv", default_opts)
 keymap("v", "J", ">gv", default_opts)
 
--- Switch buffer
-keymap("n", "<A-j>", ":bprevious<CR>", default_opts)
-keymap("n", "<A-k>", ":bnext<CR>", default_opts)
-
 -- Cancel search highlighting with ESC
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_opts)
 -- Resizing panes
@@ -21,6 +17,21 @@ keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
+--Use BufferLineGoToBuffer to Switch Buffer
+keymap("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>", default_opts)
+keymap("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>", default_opts)
+keymap("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>", default_opts)
+keymap("n", "<A-4>", ":BufferLineGoToBuffer 4<CR>", default_opts)
+keymap("n", "<A-5>", ":BufferLineGoToBuffer 5<CR>", default_opts)
+keymap("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>", default_opts)
+keymap("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", default_opts)
+--create and Switch windows
+keymap("n", "<A-cr>", ":vs<CR>", default_opts)
+keymap("n", "<C-cr>", ":split<CR>", default_opts)
+keymap("n", "<A-h>", "<C-w>h", default_opts)
+keymap("n", "<A-j>", "<C-w>j", default_opts)
+keymap("n", "<A-k>", "<C-w>k", default_opts)
+keymap("n", "<A-l>", "<C-w>l", default_opts)
 --which-key register mappings
 local wk = require("which-key")
 wk.add({
@@ -37,6 +48,16 @@ wk.add({
 	{ "<leader>ll", "<cmd>LspLog<cr>", desc = "Show Lsp Log in new buffer", mode = "n" },
 	--snacks.picker
 	--TODO: add snack bindings
+	{ "<leader>t", icon = "", desc = "Toogle Settings", mode = "n" },
+	{ "<leader>s", icon = "", desc = "Snacks picker", mode = "n" },
+	--Switch buffer
+	{ "<leader>b", icon = "", desc = "Buffer commands", mode = "n" },
+	{ "<leader>bh", ":BufferLineCyclePrev<CR>", icon = "", desc = "Left Buffer", silent = true },
+	{ "<leader>bl", ":BufferLineCycleNext<CR>", icon = "", desc = "Right Buffer", silent = true },
+	{ "<leader>bd", ":bdelete<CR>", icon = "", desc = "Delete Buffer", silent = true },
+	{ "<leader>bo", ":BufferLineCloseOthers<CR>", icon = "", desc = "Close Other Buffer", silent = true },
+	{ "<leader>bp", ":BufferLinePick<CR>", icon = "", desc = "Pick Buffer ", silent = true },
+	{ "<leader>bc", ":BufferLinePickClose<CR>", icon = "🏹", desc = "Pick Buffer to Close", silent = true },
 
 	--NvimTree
 	--	{ "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree", mode = "n" },

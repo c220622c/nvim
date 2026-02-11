@@ -7,11 +7,13 @@ return {
 		image = { enabled = true },
 		dashboard = {},
 		bigfile = {},
+		quickfile = {},
 		notifier = {
 			enabled = true,
 			timeout = 3000,
 		},
 		lazygit = {},
+		--		win = {},
 		explorer = {
 			-- your explorer configuration comes here
 			-- or leave it empty to use the default settings
@@ -74,6 +76,13 @@ return {
 			desc = "Smart Find Files",
 		},
 		{
+			"<leader>sp",
+			function()
+				Snacks.picker.projects()
+			end,
+			desc = "Projects",
+		},
+		{
 			"<leader>sb",
 			function()
 				Snacks.picker.buffers()
@@ -90,9 +99,16 @@ return {
 		{
 			"<leader>sc",
 			function()
-				Snacks.picker.command_history()
+				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
 			end,
-			desc = "Command History",
+			desc = "Find Config File",
+		},
+		{
+			"<leader>sf",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "Find Files",
 		},
 		{
 			"<leader>sn",
@@ -124,7 +140,7 @@ return {
 		},
 		--file explorer
 		{
-			"<leader>n",
+			"<leader>e",
 			function()
 				Snacks.explorer()
 			end,

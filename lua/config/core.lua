@@ -22,7 +22,5 @@ vim.o.expandtab = true -- <Tab> expands spaces instead of \t
 vim.o.tabstop = 4 -- spaces per <Tab>
 vim.o.shiftwidth = 4 --spaces per indentation level
 vim.o.smartindent = false -- indentation is aware of newline insert
-
-vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.clipboard = "unnamedplus"
